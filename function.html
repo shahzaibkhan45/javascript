@@ -15,9 +15,44 @@
         //bar bar code ko repeatly nahi likhna parta hai
 
 
-        function Heloo(){
-         console.log(hello);
+        // function Heloo(){
+        //  console.log(hello);
+        // }
+
+
+        // let user = {
+        //     name : "shahzaib",
+        //     age : 18,
+        //     call : function(){
+        //         console.log(this.name);
+        //     } 
+        // }
+        // user.call();
+        // console.log(this)
+
+        //this aik special keyword hai jo current object ko refer karta hai -  lekin iski exact value is bt per depend karti hai ke function kese call howa hai 
+
+        const user1 = {
+             name : "Shahzaib",
+             age : 18,
+
+             call : ()=>{
+              console.log(this.name + "  " + this.age);
+             }
         }
+
+
+        
+
+        // method 1 to call
+        user1.call();
+
+        //method 2 to call
+        // let result = user1.call;
+        // result()
+
+        //jis object ke method ko call karte hai this ishi object ko refer karta hai
+
     </script>
 </body>
 </html>
