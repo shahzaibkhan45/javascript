@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check the number is even or odd</title>
+</head>
+<body>
+
+    <script>
+
+
+      //check the number is even or odd
+        let number = prompt("write a number to check that number is even or odd");
+        number = Number(number);
+
+        while(number === 0){
+            number = Number(prompt("0 is not allowed , write a number to check that number is even or odd"));
+        }
+
+        if(number % 2 === 0){
+          document.write(`this  ${number} is even`);
+        }else{
+             document.write(`this  ${number} is odd`);
+        }
+    </script>
+    
+</body>
+</html>

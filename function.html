@@ -32,27 +32,47 @@
 
         //this aik special keyword hai jo current object ko refer karta hai -  lekin iski exact value is bt per depend karti hai ke function kese call howa hai 
 
-        const user1 = {
-             name : "Shahzaib",
-             age : 18,
+        // const user1 = {
+        //      name : "Shahzaib",
+        //      age : 18,
 
-             call : ()=>{
-              console.log(this.name + "  " + this.age);
-             }
-        }
+        //      call : ()=>{
+        //       console.log(this.name + "  " + this.age);
+        //      }
+        // }
 
 
         
 
         // method 1 to call
-        user1.call();
+        // user1.call();
 
         //method 2 to call
         // let result = user1.call;
         // result()
 
         //jis object ke method ko call karte hai this ishi object ko refer karta hai
+          
 
+            // const user = {
+            //         name: "Shahzaib",
+            //         phone: "0305385038",
+
+            //         show: () => {
+            //             console.log(this.name);
+            //         }
+            //     };
+
+            //     user.show();
+
+            // for(let i = 0; i < 5; ++i){
+            //     console.log(i);
+            // }
+
+            let i = 0;
+            console.log(i++);
+            // i++;
+            console.log(i);
     </script>
 </body>
 </html>
