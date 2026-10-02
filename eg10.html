@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek number lo aur check karo ke woh 5 se divisible hai ya 7 se divisible hai, lekin dono se ek saath divisible nahi hai.</title>
+</head>
+<body>
+    <script>
+     let number = Number(prompt("write a number"));
+
+     if((number % 5 === 0 || number % 7 === 0) && !(number % 5 === 0 && number % 7 === 0)){
+       document.write("The number is even or positive");
+     }else{
+         document.write("The number is not")
+     }
+
+    </script>
+</body>
+</html>

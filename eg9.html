@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek number lo aur check karo ke woh positive hai, odd hai, aur 10 se divisible nahi hai.</title>
+</head>
+<body>
+    <script>
+     let number = Number(prompt("write a number"));
+
+     if(!(number % 10 === 0) && number > 0 && !(number % 2 === 0)){
+       document.write("The number is even or positive");
+     }else{
+         document.write("The number is not")
+     }
+
+    </script>
+</body>
+</html>

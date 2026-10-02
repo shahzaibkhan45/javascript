@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek number lo aur check karo ke woh 2 se divisible hai ya 3 se divisible hai, lekin 6 se divisible nahi hai.</title>
+</head>
+<body>
+    <script>
+     let number = Number(prompt("write a number"));
+
+     if(!(number % 6 === 0) && (number % 3 === 0 || number % 2 === 0)){
+        // !(12 % 6 === 0) => !true => false 
+        // 12 % 3 === 0 or 12 % 2 === 0 
+
+       document.write("The number is even or positive");
+     }else{
+         document.write("The number is not")
+     }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 numbers lo aur find karo ke sabse chhota number kaunsa hai.</title>
+</head>
+<body>
+    <script>
+     let number1 = Number(prompt("write a number"));
+     let number2 = Number(prompt("write a number"));
+     let number3 = Number(prompt("write a number"));
+
+     if((number1 < number2)&& number1 < number3){
+       document.write("first number is less");
+     }else if(number2 < number1 && number2 < number3){
+         document.write("second number is less");
+     }else if(number3 < number1 && number3 < number2){
+         document.write("the third number is less")
+     }else if(number1 === number2 && number1 < number3){
+        document.write("the number1 and number2 is same and less also")
+     }else if(number1 === number3 && number1 < number2){
+        document.write("the number1 and number3 is same and less also")
+     }else if(number3 === number2 && number3 < number1){
+        document.write("the number3 and number2 is same and less also")
+     }else{
+         document.write("the all number are same")
+     }
+
+    </script>
+</body>
+</html>
