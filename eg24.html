@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek number lo aur check karo ke us number mein kitne even digits aur kitne odd digits hain.</title>
+</head>
+<body>
+    <script>
+         let number = Number(prompt("write a number"));
+
+         let evenDigit = 0;
+         let oddDigit = 0;
+
+         while(number > 0){
+         lastDigit = number % 10;
+
+         if(lastDigit % 2 === 0){
+            evenDigit++;
+         }else{
+            oddDigit++;
+         }
+         number = Math.floor(number / 10);
+
+
+
+         }
+         console.log(`the even number in digit is ${evenDigit}`);
+         console.log(`the odd number in digit is ${oddDigit}`);
+
+
+
+    </script>
+</body>
+</html>

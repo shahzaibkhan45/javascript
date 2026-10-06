@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek number lo aur count karo ke us number mein total kitne digits hain.</title>
+</head>
+<body>
+    <script>
+        let number = Number(prompt("write a number"));
+
+        let count = 0;
+
+        while(number > 0){
+            let lastDigit = number % 10;
+             count++;
+            number = Math.floor(number / 10);
+        }
+        console.log(count);
+    </script>
+</body>
+</html>

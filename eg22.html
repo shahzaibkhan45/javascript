@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek number lo aur check karo ke us number ke andar sabse bara digit kaunsa hai.</title>
+</head>
+<body>
+    <script>
+        let number = Number(prompt("write a number"));
+        let biggestNumber = 0;
+        while(number > 0){
+        lastDigit = number % 10;
+
+        if(lastDigit > biggestNumber){
+            biggestNumber = lastDigit;
+        }
+
+        number = Math.floor(number / 10);
+
+        }
+        console.log(biggestNumber);
+    </script>
+</body>
+</html>

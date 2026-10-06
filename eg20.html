@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek number lo aur check karo ke number palindrome hai ya nahi.</title>
+</head>
+<body>
+    <script>
+        let number = Number(prompt("write a number"));
+
+        const oldNumber = number;
+
+        let newNumber = "";
+
+        while(number > 0){
+            let lastDigit = number % 10;
+
+            lastDigit = String(lastDigit);
+
+            newNumber += lastDigit;
+
+            number = Math.floor(number / 10);
+
+        }
+
+        if(oldNumber == newNumber){
+            console.log("the number is palindrome")
+        }else{
+            console.log("the number is not palindrome")
+        }
+
+
+    </script>
+</body>
+</html>

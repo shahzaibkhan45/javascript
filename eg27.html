@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ek number lo aur check karo ke us number ke andar koi digit 7 hai ya nahi.</title>
+</head>
+<body>
+    <script>
+        let number = Number(prompt("write a number"));
+        let CheckNumber = 0; 
+        while(number > 0){
+         let lastDigit = number % 10;
+       
+         if(lastDigit === 7){
+         CheckNumber++;
+         }
+
+         number = Math.floor(number / 10);
+        }
+        if(CheckNumber !== 0){
+          console.log("yes");
+        }else{
+               console.log("no")
+        }
+    </script>
+</body>
+</html>
