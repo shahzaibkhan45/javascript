@@ -6,6 +6,38 @@
     <title>Ek number lo aur check karo ke woh Prime Number hai ya nahi.</title>
 </head>
 <body>
+
+    <script>
+        //prime number woh number hote hai jo serif apne aur 1 ke table me aaie jese 2 hai ye 1 ke or 2 ke hi table me aata hai or jese 6 hai ye 3 tables me ata hau 1 2 3 to ye nah hoga au sare even number prime number nahi hote 2 ke ilwa 
+    let number = Number(prompt("write a number to check it is a prime or not"));
+      let isPrime = true;
+    if(number <= 1){
+     isPrime = false;
+    }else{
+        if(number === 2){
+             isPrime = true;
+        }else if(number % 2 === 0){
+             isPrime = false;
+        }else{
+
+            for(let i = 3 ; i <= Math.sqrt(number) ; i += 2){
+                if(number % i === 0){
+                    isPrime = false;
+                }
+            }
+        }
+
+}
+
+    if(isPrime){
+        console.log("The number is a prime number")
+    }else{
+         console.log("The number is not a prime number");
+    }
+
     
+    
+
+    </script>
 </body>
 </html>

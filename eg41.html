@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is array mein pehla number find karo jo 10 se greater aur even dono ho.</title>
+</head>
+<body>
+    <script>
+       let numbers = [11, 5, 8, 21, 3, 15];
+       let isYes = false;
+        let firstGreaterThan10AndEven = 0;
+        for(let i = 0 ; i < numbers.length ; i++){
+         if(numbers[i] > 10 && numbers[i] % 2 === 0){
+           
+             firstGreaterThan10AndEven = numbers[i];
+              isYes = true;
+            break;
+         }
+        }
+
+        if(isYes){
+
+            console.log(firstGreaterThan10AndEven);
+        }else{
+            console.log("the number is not");
+        }
+    </script>
+</body>
+</html>

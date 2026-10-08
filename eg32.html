@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is array mein se second largest number find karo.</title>
+</head>
+<body>
+    <script>
+        let numbers = [10, 25, 7, 42, 18, 31];
+        let largestNumber = numbers[0];
+        let secondLargest = numbers[0];
+
+        for(let i = 1 ; i < numbers.length ; i++){
+            if(numbers[i] > largestNumber){
+                secondLargest = largestNumber; 
+                largestNumber = numbers[i];
+
+            }else if(numbers[i] > secondLargest){
+              secondLargest = numbers[i];
+            }
+        }
+        console.log(secondLargest);
+    </script>
+</body>
+</html>

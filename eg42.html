@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is array mein pehla number find karo jo 5 se greater ho aur 3 se divisible ho.</title>
+</head>
+<body>
+    <script>
+        let numbers = [12, 5, 8, 20, 3, 15 ,9];
+        let isYes = false;
+        let CheckNumber = 0;
+
+       for(let i = 0 ; i < numbers.length ; i++){
+        if(numbers[i] > 5 && numbers[i] % 3 === 0){
+            isYes = true;
+            CheckNumber = numbers[i];
+            break;
+            
+        }
+    }
+
+        if(isYes){
+            console.log(CheckNumber);
+        }else{
+            console.log("the number is not");
+        }
+    </script>
+</body>
+</html>
