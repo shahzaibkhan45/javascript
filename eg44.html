@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array mein har number ki frequency find karo</title>
+</head>
+<body>
+    <script>
+        let numbers = [3, 5, 3, 2, 5, 3, 8, 2,7,8,9,0,6,7];
+        
+        for(let i = 0; i < numbers.length ; i++){
+            let num = numbers[i];
+            let count = 0;
+            let found = false;
+
+            for(let j = 0; j < i ; j++){
+                if(num === numbers[j]){
+                    found = true;
+                    break;
+                }
+            } 
+
+            if(found === false){
+                for(let k = 0; k < numbers.length ; k++){
+                    if(numbers[k] === num){
+                        count ++;
+                    }
+                }
+                console.log(num + "=" + count + "times");
+            }
+        }
+    </script>
+</body>
+</html>

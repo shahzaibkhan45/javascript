@@ -8,19 +8,18 @@
 <body>
     <script>
         let numbers = [10, 25, 7, 42, 18, 31];
-        let largestNumber = numbers[0];
-        let secondLargest = numbers[0];
+        let largestNum = numbers[0];
+        let seclargestNum = numbers[0];
 
-        for(let i = 1 ; i < numbers.length ; i++){
-            if(numbers[i] > largestNumber){
-                secondLargest = largestNumber; 
-                largestNumber = numbers[i];
-
-            }else if(numbers[i] > secondLargest){
-              secondLargest = numbers[i];
+        for(let i = 0; i < numbers.length ; i++){
+            if(largestNum < numbers[i]){
+                seclargestNum = largestNum;
+              largestNum = numbers[i];
+            }else if(seclargestNum < numbers[i]){
+                seclargestNum = numbers[i];
             }
         }
-        console.log(secondLargest);
+        console.log(seclargestNum);
     </script>
 </body>
 </html>

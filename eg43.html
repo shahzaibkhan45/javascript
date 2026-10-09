@@ -13,33 +13,33 @@
 
 <body>
     <script>
-        let numbers = [4, 7, 2, 9, 7, 4, 7, 2];
+        let numbers = [4, 7, 2, 9, 7, 4, 7, 2,9];
+        let duplicateNumbers = [];
+        
+        for(let i = 0 ; i < numbers.length ; i++){
+            for(let j = i + 1 ; j < numbers.length ; j++){
+                let found = false;
+                if(numbers[i] === numbers[j]){
 
-        let duplicateNumber = [];
+                     for(let k = 0; k < duplicateNumbers.length ; k++){
 
-        for (let i = 0; i < numbers.length; i++) {
-            for (let j = i + 1; j < numbers.length; j++) {
-                if (numbers[i] === numbers[j]) {
-                    let alreadyExist = false;
-                    if (duplicateNumber.length !== 0) {
-                        for (let k = 0; k < duplicateNumber.length; k++) {
-                            if (duplicateNumber[k] === numbers[i])
-                                alreadyExist = true;
-                            break;
-
-                        }
-                    } else {
-                        duplicateNumber.push(numbers[i]);
-                    }
-
-                    if (!alreadyExist) {
-                        duplicateNumber.push(numbers[i]);
+                    if(numbers[i] === duplicateNumbers[k]){
+                        found = true;
+                        break;
+                     
                     }
                 }
+                
+                if(found === false){
+                    duplicateNumbers.push(numbers[i]);
+                }
+                }
             }
-
+           
+            
         }
-        console.log(duplicateNumber);
+        console.log(duplicateNumbers);
+
 
     </script>
 </body>

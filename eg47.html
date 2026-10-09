@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array mein consecutive duplicate numbers find karo</title>
+</head>
+<body>
+    <script>
+        //consecutive mtlb aik ke bd aik or same number repeat 
+        let numbers = [2, 2, 5, 7, 7, 7,2,7,7, 3, 4, 4, 9];
+
+        for(let i = 0; i < numbers.length-1 ; i++){
+
+            if(numbers[i] === numbers[i + 1]){
+                if(numbers[i + 1] !== numbers[i - 1])
+               console.log(numbers[i]);
+            }
+        }
+
+    </script>
+</body>
+</html>

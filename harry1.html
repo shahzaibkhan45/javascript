@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumhe ek function likhna hai jo students ke naam ka array lega, aur har student ko uske naam ki length (kitne
+        characters hain) ke hisaab se ek house assign karega.</title>
+</head>
+
+<body>
+    <script>
+        let students = ["shubh", "anajali", "Shivani", "Shivangi", "Annapurna","he"];
+        function sortinghat(students) {
+            let house = [];
+            for (let student of students) {
+                if (student.length < 6) {
+                    house.push("Gryffindor");
+                } else if (student.length < 8) {
+                    house.push("Hufflepuff");
+
+                } else if (student.length < 12) {
+                    house.push("Ravenclaw");
+                } else {
+                    house.push("Slytherin");
+                }
+            }
+
+            for(let i = 0; i < students.length ; i++){
+                console.log(students[i] + " has a house " + house[i]);
+            }
+        }
+
+        sortinghat(students);
+
+        
+    </script>
+</body>
+
+</html>
