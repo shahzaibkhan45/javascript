@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aik string di gayi hai. Tumhein check karna hai ke woh palindrome hai ya nahi.</title>
+</head>
+<body>
+    <script>
+        //palindeome means word ko ulta kare to same hou jese level
+        let word = prompt("write a word to palindrome");
+        let copy = word;
+        let reverse = "";
+
+        for(let i = word.length - 1 ; i >= 0 ; i--){
+            reverse += word[i];
+        }
+        if(copy === reverse){
+            console.log("palindrome");
+        }else{
+             console.log("Not palindrome");
+        }
+    </script>
+</body>
+</html>

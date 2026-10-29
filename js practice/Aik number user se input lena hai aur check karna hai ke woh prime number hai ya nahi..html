@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aik number user se input lena hai aur check karna hai ke woh prime number hai ya nahi.</title>
+</head>
+<body>
+    <script>
+        let number = prompt("write a number");
+        number = Number(number);
+        
+        check = true;
+        if(number === 2){
+            check = true;
+        }else if(number % 2 === 0 && number !== 2 && number > 1){
+            check = false;
+        }else{
+        for(let i = 2 ; i < Math.sqrt(number) ; i++){
+            if(number % i === 0){
+                check = false;
+            }
+        }
+    }
+    if(check){
+        console.log("yes");
+    }else{
+        console.log("No")
+    }
+    </script>
+</body>
+</html>
