@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a String</title>
+</head>
+<body>
+    <script>
+
+       let n = prompt("write a number to print fibionci series");
+
+       n = Number(n);
+
+       //long method 
+
+
+    //    let secLastNum = 1;
+    //    let thirLastNum = 0;
+    //    let newNumber = 0;
+    //    let numberArray = [0,1];
+       
+    //    if(n === 0){
+    //     console.log([]);
+    //    }else if(n === 1){
+    //     console.log([0])
+    //    }else if(n === 2){
+    //     console.log(numberArray);
+    //    }else{
+    //    for(let i = 0 ; i < n - 2 ; i++){
+    //     newNumber = secLastNum + thirLastNum;
+    //     thirLastNum = secLastNum;
+    //     secLastNum = newNumber;
+    //     numberArray.push(newNumber);
+    //     newNumber = 0;
+    //    }
+    //    console.log(numberArray);
+    // }
+
+    //second method 
+
+    let a = 0;
+    let b = 1;
+    let NumberArray = [];
+
+
+    for(let i = 0; i < n ; i++ ){
+        NumberArray.push(a);
+
+        let next = a + b ;
+        a = b;
+        b = next;
+        
+    }
+    console.log(NumberArray);
+
+
+
+    </script>
+</body>
+</html>
