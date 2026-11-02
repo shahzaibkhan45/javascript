@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to count the frequency of each character in a string using loops.</title>
+</head>
+<body>
+    <script>
+    //     let count = {};
+
+        
+
+    //     for(let i = 0; i < str.length; i++){
+    //       if(count[str[i]]){
+    //         count[str[i]]++;
+    //       }else{
+    //          count[str[i]] = 1;
+    //       }
+           
+    //     }
+    //     console.log(count);
+
+     let str = "shahzaib";
+     let checked = [];
+     
+
+     for(let i = 0; i < str.length ; i++){
+
+        let exist = false;
+        for(let j = 0; j < checked.length ; j++){
+            if(str[i] === checked[j]){
+                exist = true;
+                break;
+            }
+        }
+        if(exist === false){
+            let count = 0;
+            for(let k = 0; k < str.length ; k++){
+                if(str[i] === str[k]){
+                    count++;
+                }
+            }
+            checked.push(str[i]);
+          console.log(str[i] +"="+ count)  
+          
+        }
+     }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to find the missing number in an array containing consecutive numbers.</title>
+</head>
+<body>
+    <script>
+      
+
+        // for(let i = 0; i < arr.length - 1 ; i++){
+        //     let check = arr[i] + 1;
+        //     let istrue = false;
+        //         if(arr[i + 1] === check){
+        //           istrue = true;
+        //         }
+        //         if(istrue === false){
+        //             console.log(check)
+        //         }
+
+        // }
+          let arr = [1, 2, 3, 5, 6, 7, 8,10,12,17];
+    for (let i = 0; i < arr.length; i++) {
+        for(let j = arr[i] + 1 ; j < arr[i + 1]; j++ ){
+           console.log(j)
+        }
+    }
+    </script>
+</body>
+</html>

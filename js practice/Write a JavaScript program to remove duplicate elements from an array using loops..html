@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to remove duplicate elements from an array using loops.</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3, 2, 4, 5, 3, 6, 1];
+        let reDupElem = [];
+        
+        for(let i = 0; i < arr.length ; i++){
+            let notExist = false;
+            for(let j = i + 1 ; j < arr.length; j++){
+                if(arr[i] === arr[j]){
+                    notExist = true;
+                    break;
+                }
+
+            }
+            let exist = false;
+            for(let k = 0; k < reDupElem.length ; k++){
+                if(arr[i] === reDupElem[k]){
+                    exist = true;
+                    break;
+                }
+            }
+            if(exist === false){
+             reDupElem.push(arr[i]);
+            }
+
+        }
+
+        console.log(reDupElem);
+    </script>
+</body>
+</html>
