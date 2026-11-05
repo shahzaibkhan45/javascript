@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to implement a debounce function using setTimeout() and clearTimeout().</title>
+</head>
+<body>
+    <input type="text" id="input"/>
+    <script>
+    let input = document.getElementById("input");
+    let timer;
+    function Searching(){
+        clearTimeout(timer);
+        timer = setTimeout(()=>{
+            console.log("searching");
+        },1000)
+
+    }
+
+    input.addEventListener("input" , ()=>{
+        Searching();
+    })
+    </script>
+</body>
+</html>

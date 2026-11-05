@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript function that stores previously calculated results so that when the same input is provided again, it returns the stored result instead of calculating it again.</title>
+</head>
+<body>
+    <script>
+        let saveInput = {};
+        function cal(a,b){
+         let key = a +","+ b;
+
+         if(saveInput[key] !== undefined){
+            
+            console.log("result saved");
+            return saveInput[key];
+
+         }else{
+            console.log("calculating");
+             let c = a * b + 20 * 5 / 8 * 100 + a - b * a / b;
+             return saveInput[key] = c;
+
+         }
+            
+        }
+      console.log(cal(10,30));
+      console.log(cal(30,30));
+      console.log(cal(10,40));
+      console.log(cal(10,40));
+    </script>
+</body>
+</html>

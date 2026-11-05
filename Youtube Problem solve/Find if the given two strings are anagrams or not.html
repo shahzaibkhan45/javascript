@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find if the given two strings are anagrams or not?</title>
+</head>
+
+<body>
+    <script>
+        let str1 = "shahzaib";
+        let str2 = "khanzada";
+//         str1 = "listen";
+// str2 = "silent";
+        function CharFrequency(str) {
+            let obj = {};
+
+            for (let i = 0; i < str.length; i++) {
+                let exist = false;
+                // for(let k = 0; k < obj.length; k++){
+                  if(obj[str[i]] !== undefined){
+                    exist = true;
+                  }
+                // }
+                if(exist === false){
+
+                    let count=1;
+                    for(let j = i + 1; j < str.length ; j++){
+                       if(str[i] === str[j]){
+                        count++;
+    
+                       }
+                    }
+                      obj[str[i]] = count;
+
+
+                }
+
+            }
+            return obj;
+
+        }
+        let freq1 = CharFrequency(str1);
+        console.log(freq1);
+        let freq2 = CharFrequency(str2);
+        console.log(freq2);
+        let obj1K = Object.keys(freq1);
+        let obj1V = Object.values(freq1);
+
+        let obj2K = Object.keys(freq2);
+        let obj2V = Object.values(freq2);
+        let check = false;
+        if(obj1K.length === obj2K.length){
+
+            for(let i = 0 ; i < obj1K.length ;i++){
+                let found = false;
+                for(let j = 0 ; j < obj2K.length ; j++){
+                    if(obj1K[i] === obj2K[j] && obj1V[i] === obj2V[j]){
+                     found = true;
+                     break;
+                    }
+
+                }
+               if(found){
+    check = true;
+}else{
+    check = false;
+    break;
+}
+            }
+        }
+       
+        if(check){
+            console.log("the strings are paragrams");
+        }else{
+             console.log("the strings are not  paragrams");
+        }
+
+    </script>
+</body>
+
+</html>
