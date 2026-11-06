@@ -7,28 +7,26 @@
 </head>
 <body>
     <script>
-        let name = "shahzaib";
+        let name = "shahzaibkhanzada";
         let vowel = "aeiou";
         let vowelCount = 0;
         let constantCount = 0;
         for(let i = 0; i < name.length ; i++){
             let exist = false;
            for(let j = 0; j < vowel.length ; j++){
-            if(name[i] !== vowel[j]){
+            if(name[i] === vowel[j]){
                 // count++;
-                exist = false;
-            }else{
                 exist = true;
-
+                break;
             }
            }
            if(exist){
-             constantCount++;
+               vowelCount++;
            }else{
-             vowelCount++;
+             constantCount++;
            }
         }
-        console.log("this vowel in sting is"+ vowelCount + "and" + constantCount);
+        console.log("The vowel in sting is "+ vowelCount + " and " + constantCount);
     </script>
 </body>
 </html>

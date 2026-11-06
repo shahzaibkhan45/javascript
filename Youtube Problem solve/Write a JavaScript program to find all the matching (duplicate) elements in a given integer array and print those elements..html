@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to find all the matching (duplicate) elements in a given integer array and print those elements.</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 2, 3, 6, 4, 7,7,6,5];
+        let duplicate = [];
+
+        for(let i = 0; i < arr.length ; i++){
+            let exist = false;
+            for(let k = 0; k < duplicate.length ; k++){
+               if(arr[i] === duplicate[i]){
+                exist = true;
+               }
+            }
+            if(exist === false){
+
+                for(let j = i + 1; j < arr.length ; j++){
+                    if(arr[i] === arr[j]){
+                        duplicate.push(arr[i]);
+                        break;
+                    }
+                }
+            }
+            
+        }
+        console.log(duplicate);
+    </script>
+</body>
+</html>

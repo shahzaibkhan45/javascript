@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code the insertion sort algorithm</title>
+</head>
+<body>
+    <script>
+        let arr = [5, 3, 8, 4, 2, 7, 1, 6];
+        //[3,5,8,4,2,7,1,6];
+
+        for(let i = 1; i < arr.length; i++){
+           let current = arr[i];//8
+           let j = i - 1;//2 - 1 = 1
+
+           while(j >= 0 && arr[j] > current){ // 1 >= 0 && 5 > 8
+            arr[j + 1] = arr[j]; // 3  = 5  [3,5]
+            j--;
+           }
+           arr[j + 1] = current;// 5 = 3 
+            
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>

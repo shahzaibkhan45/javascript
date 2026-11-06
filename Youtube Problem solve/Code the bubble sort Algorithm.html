@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code the Bubble Sort Algorithm</title>
+</head>
+
+<body>
+    <script>
+        let sort = [1, 2, 4, 5, 3, 6, 7, 9,1,2,3,45,6,];
+        for (let i = 0; i < sort.length; i++) {
+            for (let j = 0; j < sort.length - 1 - i; j++) {
+                if (sort[j] > sort[j + 1]) {
+                    let temp = sort[j];
+                    sort[j] = sort[j + 1];
+                    sort[j + 1] = temp;
+
+                }
+            }
+        }
+        console.log(sort);
+    </script>
+</body>
+
+</html>

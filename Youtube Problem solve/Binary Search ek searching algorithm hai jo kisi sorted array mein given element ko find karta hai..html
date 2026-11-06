@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search ek searching algorithm hai jo kisi sorted array mein given element ko find karta hai.</title>
+</head>
+
+<body>
+    <script>
+        let arr = [2, 5,23, 8, 12, 16, 38, 45, 56];
+        let target = 5;
+
+        for(let i = 0 ; i < arr.length ; i++){
+            for(let j = 0; j < arr.length - 1 - i ; j++){
+               if(arr[j] > arr[j + 1]){
+                 let temp = arr[j];
+                 arr[j] = arr[j + 1];
+                 arr[j + 1] = temp;
+               }
+            }
+
+        }
+
+
+        let left = 0;
+        let right = arr.length - 1;
+        let found = -1;
+        while(left <= right){
+            let midIndex = Math.floor((left + right) / 2);
+            let midValue = arr[midIndex];
+
+            if(target === midValue){
+                found = midIndex;
+                break;
+            }else if(target > midValue){
+                left = midIndex + 1;
+            }else{
+                right = midIndex -1;
+            }
+
+        }
+        console.log(found);
+
+        
+
+
+
+    </script>
+</body>
+
+</html>
