@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the GCD (HCF) of two numbers.</title>
+</head>
+<body>
+    <script>
+        let num1 = 60;
+        let num2 = 50;
+        function factor(num){
+            let factors = [];
+            for(let i = 1; i <= Math.sqrt(num) ; i++){
+              if(num % i === 0){
+                
+                if(num / i === i){
+                 
+                }else{
+                       factors.push(i,num / i)
+                }
+              }
+
+            }
+            return factors;
+        }
+        let fac1 = factor(num1);
+        let fac2 = factor(num2);
+        let common = [];
+          for(let i = 0; i < fac1.length ; i++){
+            for(let j = 0; j < fac2.length ; j++){
+                if(fac1[i] === fac2[j]){
+                  common.push(fac1[i]);
+                }
+
+            }
+          }
+          let largest = common[0];
+          for(let i = 0 ; i < common.length; i++){
+             if(common[i] > largest){
+                largest = common[i];
+             }
+          }
+          console.log(largest)
+
+    </script>
+</body>
+</html>

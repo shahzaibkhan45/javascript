@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Sum of Digits of a number.</title>
+</head>
+<body>
+    <script>
+        let num = 245;
+        let copy = num;
+        let count = 0;
+        let sum = 0;
+        for(let i = 0; num !== 0  ; i++){
+            let last = num % 10;
+            count++;
+            num = Math.floor(num / 10);
+
+
+        }
+        for(let i = 0; i < count ; i++){
+             let last = copy % 10;
+             sum += last;
+ copy = Math.floor(copy / 10);
+        }
+
+        console.log(sum);
+    </script>
+</body>
+</html>

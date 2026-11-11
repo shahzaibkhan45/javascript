@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strong Number : Check karo ke number ke har digit ke factorial ka sum original number ke equal hai ya nahi.</title>
+</head>
+<body>
+    <script>
+        let num = 4058;
+        // let count = num.toString().length;
+        let copy = num;
+        let StrongNum = 0;
+        for(let i = 1 ; num > 0; i++){
+           let last = num % 10;
+           let factorial = 1;
+           for(let j = last ; j > 1 ; j--){
+             factorial *= j
+           }
+           StrongNum += factorial;
+           num = Math.floor( num / 10);
+
+        }
+        if(copy == StrongNum){
+            console.log("yes")
+        }else{
+            console.log("No")
+        }
+    </script>
+</body>
+</html>

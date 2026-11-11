@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number = 153;
+        let copy = number;
+        let NumAdd = 0;
+        let count = number.toString().length;
+        for(let i = 0; number > 0; i++){
+            let last = number % 10;
+            let numberMul = 1; 
+            for(let J = 1 ; J <= count ; J++){
+                numberMul *= last;  9 * 3
+            }
+            NumAdd += numberMul;
+            number = Math.floor(number / 10);
+
+        }
+        if(copy == NumAdd){
+           console.log("number is amstrong")
+        }else{
+             console.log("number is not amstrong")
+        }
+        
+    </script>
+</body>
+</html>

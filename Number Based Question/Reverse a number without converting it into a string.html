@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a number without converting it into a string.</title>
+</head>
+<body>
+    <script>
+        let num = 245;
+        let copy = num;
+        let count = 0;
+        let reverse = 0;
+        for(let i = 0; num !== 0  ; i++){
+            let last = num % 10;
+            count++;
+            num = Math.floor(num / 10);
+
+
+        }
+        for(let i = 0; i < count ; i++){
+             let last = copy % 10;
+             reverse = reverse * 10 + last;
+ copy = Math.floor(copy / 10);
+        }
+
+        console.log(reverse);
+    </script>
+</body>
+</html>

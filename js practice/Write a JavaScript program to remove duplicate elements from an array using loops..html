@@ -7,18 +7,10 @@
 </head>
 <body>
     <script>
-        let arr = [1, 2, 3, 2, 4, 5, 3, 6, 1];
+        let arr = [1, 2, 3, 2, 4, 5, 3, 6, 1,4,5,9];
         let reDupElem = [];
         
         for(let i = 0; i < arr.length ; i++){
-            let notExist = false;
-            for(let j = i + 1 ; j < arr.length; j++){
-                if(arr[i] === arr[j]){
-                    notExist = true;
-                    break;
-                }
-
-            }
             let exist = false;
             for(let k = 0; k < reDupElem.length ; k++){
                 if(arr[i] === reDupElem[k]){
@@ -35,4 +27,4 @@
         console.log(reDupElem);
     </script>
 </body>
-</html>
+</html>;
