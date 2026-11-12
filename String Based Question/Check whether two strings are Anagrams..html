@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check whether two strings are Anagrams.</title>
+</head>
+<body>
+    <script>
+        let str1 = "aabb";
+        let str2 = "abbb";
+        function frequency(str){
+            let obj = {}
+            for(let i = 0; i < str.length ; i++ ){
+                if(obj[str[i]]){
+                    obj[str[i]]++;
+                }else{
+                    obj[str[i]] = 1;
+                } 
+        }
+        return obj;
+        }
+        let obj1 = frequency(str1);
+        let obj2 = frequency(str2);
+        console.log(obj1);
+        console.log(obj2);
+
+        if(Object.keys(obj1).length === Object.keys(obj2).length){
+            let checking = true;
+            for(let i = 0; i < Object.keys(obj1).length ; i++ ){
+                let check = false;
+                for(let j = 0; j < Object.keys(obj2).length ; j++ ){
+                    if(Object.keys(obj1)[i] === Object.keys(obj2)[j] &&obj1[Object.keys(obj1)[i]] === obj2[Object.keys(obj2)[j]]){
+                      check = true;
+                      break;
+                    }
+        }
+        if(check === false){
+            checking = false;
+            break;
+        }
+       
+        }
+        if(checking === true){
+             console.log("the tring are anagram");
+             
+        }else{
+            console.log("the tring are not anagram");
+        }
+
+
+        }else{
+            console.log("the tring are not anagram");
+        }
+    </script>
+</body>
+</html>

@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Remove Duplicate element from a string</title>
 </head>
 <body>
-    
+    <script>
+        let str = "shahzaib";
+        let newStr = "";
+        for(let i = 0; i < str.length ; i++ ){
+            let exist = false;
+            for(let j = 0; j < str.length ; j++ ){
+                if(str[i] === newStr[j]){
+                   exist = true;
+                   break;
+                }
+
+            
+        }
+        if(exist === false){
+            newStr += str[i]
+        }
+        }
+        console.log(newStr);
+    </script>
 </body>
 </html>
