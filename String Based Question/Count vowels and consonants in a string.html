@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count vowels and consonants in a string.</title>
+</head>
+<body>
+    <script>
+        let str = "shahzaibKhanzada";
+        let vowel = "aeiou";
+        let consCount = 0;
+        let vowCount = 0;
+
+        
+        for(let i = 0 ; i < str.length ; i++){
+            let check = true;
+          for(let j = 0 ; j < vowel.length ; j++){
+            if(str[i] === vowel[j]){
+              vowCount++;
+              check = false;
+              break;
+
+            }
+          }
+          if(check){
+            consCount++;
+          }
+
+        }
+        console.log("the constant in string is" + consCount)
+        console.log("the vowel in string is" + vowCount)
+    </script>
+</body>
+</html>

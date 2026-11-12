@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the first non-repeating character.</title>
+</head>
+<body>
+    <script>
+        let str = "shahzaib";
+        let repeating = false;
+        for(let i = 0; i < str.length; i++){
+            let check = false;
+            for(let j = 0; j < str.length ; j++){
+                if(str[i] === str[j] && i !== j){
+                  check = true;
+                  repeating = true;
+                  break;
+                }
+            }
+            if(check === false){
+                console.log("the first non-repeating character    " + str[i]);
+                break;
+            }
+        }
+        if(repeating === true){
+            console.log("there is no character");
+        }
+        
+    </script>
+</body>
+</html>
