@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find duplicate elements in an array.
+
+</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,3,3,4,5,6,7,4,5,2,1,7];
+        let duplicate = [];
+         for(let i = 0 ; i < arr.length; i++ ){
+            let exist = false;
+             for(let j = 0 ; j < arr.length; j++ ){
+                if(arr[i] === arr[j] && i !== j){
+                  exist = true;
+                  break;
+
+                }
+            
+        }
+        if(exist === true){
+            let already = false; 
+            for(let k = 0;k < duplicate.length ; k++){
+                 if(arr[i] === duplicate[k]){
+                    already = true;
+                    break;
+                 }
+            }
+            if(already === false){
+                duplicate.push(arr[i]);
+            }
+        }
+        }
+        console.log(duplicate)
+    </script>
+</body>
+</html>

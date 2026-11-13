@@ -7,25 +7,41 @@
 </head>
 <body>
     <script>
-        let num = 6;
-        let FirSec = [0,1];
+        // let num = 6;
+        // let FirSec = [0,1];
+        // let fibionci = [0,1];
+        // if(num <= 0){
+        //     console.log([])
+        // }else if(num === 1){
+        //     console.log([0]);
+        // }else if(num === 2){
+        //     console.log(FirSec);
+        // }else{
+        //     for(let i = 0; i < num - 2 ; i++){
+        //         let number = fibionci[i] + fibionci[i + 1];
+        //         fibionci.push(number);
+
+
+        //     }
+        //     console.log(fibionci)
+        // }
+        
+        let num = 8;
         let fibionci = [0,1];
-        if(num <= 0){
-            console.log([])
+
+        if(num < 1){
+            console.log([]);
         }else if(num === 1){
-            console.log([0]);
+              console.log([0]);
         }else if(num === 2){
-            console.log(FirSec);
+            console.log([0,1])
         }else{
-            for(let i = 0; i < num - 2 ; i++){
-                let number = fibionci[i] + fibionci[i + 1];
-                fibionci.push(number);
-
-
+            for(let i = 1; i <= num - 2 ; i++){
+             let c = fibionci[i] + fibionci[i - 1];
+             fibionci.push(c);
             }
             console.log(fibionci)
         }
-        
 
     </script>
 </body>

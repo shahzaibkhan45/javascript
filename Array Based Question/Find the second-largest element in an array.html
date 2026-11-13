@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the second-largest element in an array.
+
+</title>
+</head>
+<body>
+    <script>
+          let arr = [20,40,1,20,50,90,67,97,5];
+          let largest = arr[0];
+          let second = arr[0];
+
+          for(let i = 0; i < arr.length ; i++){
+             if(largest < arr[i]){
+                second = largest;
+                largest = arr[i];
+             }else if(second < arr[i]){
+                second = arr[i]
+             }
+          };
+          console.log(largest);
+          console.log(second);
+    </script>
+</body>
+</html>

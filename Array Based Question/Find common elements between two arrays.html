@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find common elements between two arrays.</title>
+</head>
+<body>
+    <script>
+        let arr1 = [1,2,3,4,5,6];
+        let arr2 = [1,2,3,9,5,6];
+        let common = [];
+        for(let i = 0; i < arr1.length; i ++ ){
+            let exist = false;
+            for(let j = 0; j < arr2.length; j++){
+                if(arr1[i] === arr2[j]){
+                  exist = true;
+                  break;
+                }
+            }
+            if(exist === true){
+               let already = false;
+               for(let k = 0; k < common.length ; k++){
+                if(arr1[i] === common[k]){
+                    already = true;
+                    break;
+                }
+               }
+               if(already === false){
+                common.push(arr1[i]);
+               }
+            }
+        }
+        console.log(common);
+    </script>
+</body>
+</html>

@@ -9,16 +9,16 @@
     <script>
         let num = 245;
         let copy = num;
-        let count = 0;
+        // let count = 0;
         let reverse = 0;
-        for(let i = 0; num !== 0  ; i++){
-            let last = num % 10;
-            count++;
-            num = Math.floor(num / 10);
+        // for(let i = 0; num !== 0  ; i++){
+        //     let last = num % 10;
+        //     count++;
+        //     num = Math.floor(num / 10);
 
 
-        }
-        for(let i = 0; i < count ; i++){
+        // }
+        for(let i = 0; copy > 0 ; i++){
              let last = copy % 10;
              reverse = reverse * 10 + last;
  copy = Math.floor(copy / 10);

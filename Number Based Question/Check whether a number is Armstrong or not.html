@@ -7,25 +7,57 @@
 </head>
 <body>
     <script>
-        let num = 45;
+        // let num = 45;
+        // let copy = num;
+        // let count = num.toString().length;
+        // let fact = 0;
+
+        // for(let i = 0 ; i < count ; i++){
+        //     let last = num % 10;
+        //     let factorial = 1;
+        //     for(let i = 0; i < count ; i++){
+        //       factorial *= last
+        //     }
+        //     fact += factorial
+        //     num = Math.floor(num / 10);
+
+        // }
+        // if(copy === factorial){
+        //     console.log("the num is amstrong")
+        // }else{
+        //    console.log("the num is not amstrong") 
+        // }
+
+
+
+
+
+
+
+
+
+        let num = 145;
         let copy = num;
         let count = num.toString().length;
-        let fact = 0;
+        let amstrong = 0;
 
-        for(let i = 0 ; i < count ; i++){
+        for(let i = 0; i < count ; i++){
             let last = num % 10;
-            let factorial = 1;
-            for(let i = 0; i < count ; i++){
-              factorial *= last
+            let power = 1;
+            for(let j = 0 ; j < count ; j++){
+              power *= last;
             }
-            fact += factorial
+
+            amstrong += power;
             num = Math.floor(num / 10);
 
+
+
         }
-        if(copy === factorial){
-            console.log("the num is amstrong")
+        if(copy === amstrong){
+            console.log("yes");
         }else{
-           console.log("the num is not amstrong") 
+            console.log("no");
         }
 
         

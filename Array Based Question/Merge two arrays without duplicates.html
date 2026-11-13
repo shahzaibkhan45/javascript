@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge two arrays without duplicates.</title>
+</head>
+<body>
+    <script>
+        let arr1 = [1,2,3,4,5,9,10,4];
+        let arr2 = [6,7,8,9,10];
+        let result = [];
+        for(let i = 0; i < arr1.length ; i++){
+            let exist = false;
+             for(let j = 0 ; j < result.length; j++ ){
+                if(arr1[i] === result[j]){
+                  exist = true;
+                  break;
+                }
+            
+        }
+        if(exist === false){
+            result.push(arr1[i]);
+        }
+        
+        }
+        for(let i = 0; i < arr2.length ; i++){
+            let exist = false;
+             for(let j = 0 ; j < result.length; j++ ){
+                if(arr2[i] === result[j]){
+                  exist = true;
+                  break;
+                }
+            
+        }
+        if(exist === false){
+            result.push(arr2[i]);
+        }
+        
+        }
+        console.log(result);
+    </script>
+</body>
+</html>

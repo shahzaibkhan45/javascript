@@ -7,7 +7,19 @@
 </head>
 <body>
     <script>
-        let entence
+        let sentence =  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloremque consequuntur quibusdam voluptatum adipisci, sed dignissimos ducimus quae tempore quia, dolorem molestiae officiis, nulla blanditiis. Quia facere voluptatum voluptatem rerum."
+
+        let sepWord = sentence.split(/[ ,.]+/);
+        // console.log(sepWord);
+        let largest = sepWord[0];
+
+        for(let i = 0; i < sepWord.length ; i++){
+            if(largest.length < sepWord[i].length){
+                largest = sepWord[i];
+            }
+
+        }
+        console.log(largest);
     </script>
 </body>
 </html>

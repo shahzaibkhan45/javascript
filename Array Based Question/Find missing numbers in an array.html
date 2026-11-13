@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find missing numbers in an array.</title>
+</head>
+<body>
+    <script>
+        let arr = [2,3,4,6,8,3,1,4,5,10,7,3,2,1,15];
+
+        for(let i = 0; i < arr.length ; i++){
+             for(let j = 0 ; j < arr.length - 1 - i; j++ ){
+            if(arr[j] > arr[j + 1]){
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+
+        }
+         let last = arr[arr.length - 1];
+        // console.log(last);
+        
+
+        for(let i = 1 ; i < last; i++ ){
+            let exist = false;
+             for(let j = 0 ; j < arr.length; j++ ){
+
+                if(i === arr[j]){
+                    exist = true;
+                    break;
+                }
+            
+        }
+        if(exist === false){
+            console.log(i);
+        }
+        }
+    </script>
+</body>
+</html>
